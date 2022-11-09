@@ -1,0 +1,17 @@
+{% extends "blog/base.html" %}
+{% block content %}
+<h1>About Page</h1>
+{% for algo in algos %}
+        <article class="media content-section">
+            <div class="media-body">
+            <div class="article-metadata">
+                <a class="mr-2" href="#">{{ algo.name }}</a>
+                <small class="text-muted">{{ algo.vehicules }}</small>
+            </div>
+            <h2><a class="article-title" href="#">{{ algo.nbre_vehicule }}</a></h2>
+            <p class="article-content">{{ algo.ratio }}</p>
+            </div>
+        </article>
+    {% endfor %}
+{% endblock content %}
+
